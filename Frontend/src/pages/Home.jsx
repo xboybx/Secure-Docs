@@ -1,6 +1,13 @@
-import { Link } from 'react-router-dom';
-import { useAuth } from '../contexts/AuthContext';
-import { FiShield, FiShare2, FiCloud, FiLock, FiUsers, FiFileText } from 'react-icons/fi';
+import { Link } from "react-router-dom";
+import { useAuth } from "../contexts/AuthContext";
+import {
+  FiShield,
+  FiShare2,
+  FiCloud,
+  FiLock,
+  FiUsers,
+  FiFileText,
+} from "react-icons/fi";
 
 const Home = () => {
   const { isAuthenticated } = useAuth();
@@ -8,34 +15,40 @@ const Home = () => {
   const features = [
     {
       icon: FiShield,
-      title: 'Secure Storage',
-      description: 'Your documents are encrypted and stored securely with bank-level security measures.'
+      title: "Secure Storage",
+      description:
+        "Your documents are encrypted and stored securely with bank-level security measures.",
     },
     {
       icon: FiShare2,
-      title: 'Family Sharing',
-      description: 'Share documents with family members while maintaining complete control over permissions.'
+      title: "Family Sharing",
+      description:
+        "Share documents with family members while maintaining complete control over permissions.",
     },
     {
       icon: FiCloud,
-      title: 'Cloud Access',
-      description: 'Access your documents anytime, anywhere from any device with internet connectivity.'
+      title: "Cloud Access",
+      description:
+        "Access your documents anytime, anywhere from any device with internet connectivity.",
     },
     {
       icon: FiLock,
-      title: 'Privacy Protected',
-      description: 'Your personal information is protected with advanced encryption and privacy controls.'
+      title: "Privacy Protected",
+      description:
+        "Your personal information is protected with advanced encryption and privacy controls.",
     },
     {
       icon: FiUsers,
-      title: 'Aadhaar Linked',
-      description: 'Secure authentication linked to your Aadhaar number for verified identity protection.'
+      title: "Aadhaar Linked",
+      description:
+        "Secure authentication linked to your Aadhaar number for verified identity protection.",
     },
     {
       icon: FiFileText,
-      title: 'All Document Types',
-      description: 'Store PAN cards, passports, certificates, and other important government documents.'
-    }
+      title: "All Document Types",
+      description:
+        "Store PAN cards, passports, certificates, and other important government documents.",
+    },
   ];
 
   return (
@@ -45,13 +58,16 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <h1 className="text-5xl font-bold mb-6">
-              Secure Digital Document 
-              <span className="block text-secondary-300">Management System</span>
+              Secure Digital Document
+              <span className="block text-secondary-300">
+                Management System
+              </span>
             </h1>
             <p className="text-xl mb-8 max-w-3xl mx-auto text-primary-100">
-              Store, manage, and share your government documents securely. 
-              Access your PAN card, passport, Aadhaar, and other important documents 
-              anytime, anywhere with complete security and family sharing capabilities.
+              Store, manage, and share your government documents securely.
+              Access your PAN card, passport, Aadhaar, and other important
+              documents anytime, anywhere with complete security and family
+              sharing capabilities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               {!isAuthenticated ? (
@@ -82,7 +98,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+{/*       {/* Features Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -90,83 +106,105 @@ const Home = () => {
               Why Choose SecureDoc?
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Experience the future of document management with our comprehensive, 
-              secure, and user-friendly platform designed for modern India.
+              Experience the future of document management with our
+              comprehensive, secure, and user-friendly platform designed for
+              modern India.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="card p-6 text-center hover:shadow-lg transition-shadow duration-300">
+              <div
+                key={index}
+                className="card p-6 text-center hover:shadow-lg transition-shadow duration-300"
+              >
                 <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="text-2xl text-primary-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600">
-                  {feature.description}
-                </p>
+                <p className="text-gray-600">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Benefits Section */}
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      {/* Instructions Section */}
+      <section className="py-20 bg-gray-50 border-t border-b border-gray-200">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-primary-700 mb-6 text-center">
+            How to Use SecureDoc
+          </h2>
+          <div className="space-y-8 text-lg text-gray-700">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Digital India, Secure Future
-              </h2>
-              <p className="text-lg text-gray-600 mb-8">
-                Join millions of Indians who are embracing digital document management. 
-                Our platform aligns with the Government of India's vision for a paperless, 
-                efficient, and transparent governance system.
-              </p>
-              
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5">
-                    <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Reduce Government Costs</h4>
-                    <p className="text-gray-600">Lower overhead costs through digital transformation</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5">
-                    <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Prevent Document Loss</h4>
-                    <p className="text-gray-600">Never lose important documents again with secure cloud storage</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5">
-                    <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Enhanced Accessibility</h4>
-                    <p className="text-gray-600">Access services across education, healthcare, railways, and more</p>
-                  </div>
-                </div>
-              </div>
+              <h3 className="font-semibold text-xl mb-2 text-primary-600">
+                1. Create an Account
+              </h3>
+              <ul className="list-disc pl-6">
+                <li>
+                  Click <b>Get Started Today</b> or{" "}
+                  <b>Create Your Account Now</b> to register.
+                </li>
+                <li>
+                  Fill in all required fields: Name, Email, Password (min 6
+                  chars), Phone (10 digits), Aadhaar (12 digits), Date of Birth.
+                </li>
+                <li>Accept the Terms of Service and Privacy Policy.</li>
+                <li>Verify your phone number via OTP if prompted.</li>
+              </ul>
             </div>
-            
-            <div className="relative">
-              <img
-                src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="Digital document management"
-                className="rounded-lg shadow-xl"
-              />
-              <div className="absolute inset-0 bg-primary-600 bg-opacity-10 rounded-lg"></div>
+            <div>
+              <h3 className="font-semibold text-xl mb-2 text-primary-600">
+                2. Login
+              </h3>
+              <ul className="list-disc pl-6">
+                <li>
+                  Click <b>Sign In</b> and enter your registered email and
+                  password.
+                </li>
+                <li>
+                  Forgot password? Use the link on the login page to reset.
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold text-xl mb-2 text-primary-600">
+                3. Upload Documents
+              </h3>
+              <ul className="list-disc pl-6">
+                <li>
+                  Go to <b>Upload Document</b> from your dashboard or documents
+                  section.
+                </li>
+                <li>Click to browse or drag-and-drop your file.</li>
+                <li>
+                  <b>Allowed formats:</b> JPEG, PNG, PDF (max 10MB).
+                </li>
+                <li>
+                  Fill in required details: Title, Document Type. Optionally add
+                  description, issued by, document number, dates, tags.
+                </li>
+                <li>
+                  Click <b>Upload Document</b> to save.
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold text-xl mb-2 text-primary-600">
+                4. Document Upload Rules
+              </h3>
+              <ul className="list-disc pl-6">
+                <li>Only upload your own or authorized documents.</li>
+                <li>
+                  Do not upload offensive, illegal, or copyrighted material.
+                </li>
+                <li>
+                  Use clear titles and correct document types for easy
+                  management.
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -180,8 +218,9 @@ const Home = () => {
               Ready to Go Digital?
             </h2>
             <p className="text-xl text-primary-100 mb-8">
-              Join thousands of users who have already made the switch to secure, 
-              digital document management. Get started today and experience the future.
+              Join thousands of users who have already made the switch to
+              secure, digital document management. Get started today and
+              experience the future.
             </p>
             <Link
               to="/register"
